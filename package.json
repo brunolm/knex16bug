@@ -1,0 +1,31 @@
+{
+  "name": "knex16",
+  "version": "1.0.0",
+  "description": "knex16 full stack project.",
+  "scripts": {
+    "api-i": "docker-compose run --rm api npm i",
+    "client-i": "docker-compose run --rm client npm i"
+  },
+  "keywords": [
+    "knex16",
+    "full-stack-generator"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "husky": "1.0.0-rc.15",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,scss,md,css,json,yml}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

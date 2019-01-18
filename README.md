@@ -1,0 +1,3 @@
+# meta
+
+Full Stack project
