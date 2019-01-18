@@ -10,8 +10,8 @@ services:
 
   api:
     image: node:8.14.0
-    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; npm run migrate-make -- test'
-    # command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; npm i knex@0.16'
+    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; npm i; npm run migrate-make -- test'
+    # command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; npm i knex@0.15'
     working_dir: /usr/src/app
     volumes:
       - ./api:/usr/src/app
